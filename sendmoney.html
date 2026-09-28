@@ -3,22 +3,41 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Enviar Dinero</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alke Wallet - Enviar Dinero</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
   <!-- jQuery y jQuery UI -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 
 <body class="bg-light">
 
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-wallet2"></i> Alke Wallet</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="menu.html"><i class="bi bi-house-door"></i> Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="deposito.html"><i class="bi bi-bank"></i> Depósitos</a></li>
+          <li class="nav-item"><a class="nav-link" href="transaction.html"><i class="bi bi-list-check"></i> Movimientos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-box-arrow-right"></i> Salir</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
   <div class="container mt-5">
     <div class="card shadow">
       <div class="card-header bg-primary text-white">
@@ -28,26 +47,24 @@
         <form id="sendMoneyForm">
           <div class="mb-3">
             <label for="destinatario" class="form-label">Destinatario</label>
-            <input type="text" class="form-control" id="destinatario" placeholder="Escribe un nombre o correo">
+            <input type="text" class="form-control" id="destinatario" placeholder="Escribe un nombre o correo" required>
           </div>
           <div class="mb-3">
             <label for="monto" class="form-label">Monto</label>
-            <input type="number" class="form-control" id="monto" placeholder="Ingrese monto">
+            <input type="number" class="form-control" id="monto" placeholder="Ingrese monto" min="1" required>
           </div>
           <button type="submit" class="btn btn-primary w-100">Enviar</button>
         </form>
         <div id="resultado" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
 
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <!-- jQuery UI -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-
-        <!-- Archivos JS -->
-        <script src="assets/js/transacciones.js"></script>
-        <script src="assets/js/sendmoney.js"></script>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Archivos JS -->
+  <script src="assets/js/transacciones.js"></script>
+  <script src="assets/js/sendmoney.js"></script>
 </body>
 
 </html>
